@@ -98,7 +98,7 @@ func deploymentForMemcached(m *v1alpha1.Memcached) *appsv1.Deployment {
 				},
 				Spec: v1.PodSpec{
 					Containers: []v1.Container{{
-						Image:   "memcached:1.4.36-alpine",
+						Image:   "memcached:1.5.0-alpine",
 						Name:    "memcached",
 						Command: []string{"memcached", "-m=64", "-o", "modern", "-v"},
 						Ports: []v1.ContainerPort{{
